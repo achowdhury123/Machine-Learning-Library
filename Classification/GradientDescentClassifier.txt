@@ -1,0 +1,20 @@
+Algorithm: Gradient Descent Classifier
+
+Computes an optimized best fit line for a linear dataset, as well as a
+corresponding set of margins that surround as many training instances as
+possible, based on the regularization parameter C. Supports both hard margin
+and soft margin regression.
+
+Parameters:
+
+C - regularization parameter that determines the amount of error tolerated
+during optimization
+
+Methods:
+
+train - optimizes the support vector machine's parameters based on training
+dataset and regularization parameters; uses randomized, mini-batch gradient
+descent, where batch_size is the size of each training batch
+
+predict - predicts values for new instances once support vector machine
+parameters have been optimized

@@ -1,0 +1,24 @@
+Algorithm: Random Forest Classifier
+
+Uses multiple randomized decision trees to create an ensemble method for
+classification. Uses Python's multiprocessing library to optimize processing
+speed.
+
+Parameters:
+
+decision_trees - the number of decision trees to grow in the forest
+
+max_depth - the maximum amount of levels in the tree that will be built
+
+min_samples_per_leaf - the minimum amount of samples that can be in a leaf
+before it can be split
+
+Methods:
+
+train - optimizes the trees in the random forest
+
+predict_proba - uses the optimized random forest to predict to
+predict the probability that a new instances belong to a class
+
+predict - uses the optimized random forest to predict class values for new
+instances

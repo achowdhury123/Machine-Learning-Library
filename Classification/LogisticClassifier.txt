@@ -1,0 +1,32 @@
+Algorithm: Logistic Classifier
+
+Computes probabilities for input classes. Supports both binary classification
+as well as multiclass. Algorithm uses the logistic function for binary
+classification and the generalized softmax function for multiclass
+classification.
+
+Parameters:
+
+n_features - the number of features in the input set
+
+multi_class - boolean value that determines whether the classification will be
+binary when false or multiclass when true
+
+classes - the number of classes in the training dataset when multi_class is set
+to true
+
+Methods:
+
+logit - computes the logistic function value for the instances in a dataset
+
+softmax - computes the softmax score for the instances in a dataset
+
+train - optimizes logistic classification parameters based on training dataset,
+learning rate, and number of iterations; uses randomized, mini-batch gradient
+descent, where batch_size is the size of each training batch
+
+predict - predicts classifications for new instances once logistic
+classification parameters have been optimized
+
+predict_proba - predicts the probabilities that new instances belong to each
+class once logistic classification parameters have been optimized

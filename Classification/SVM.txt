@@ -1,0 +1,23 @@
+Algorithm: Support Vector Machine Classifier
+
+Computes an optimized classification boundary for a linear dataset, as well as
+a corresponding set of margins that form a boundary from as many training
+instances as possible, based on the regularization parameter C. Supports both
+hard  margin and soft margin classification.
+
+Parameters:
+
+C - regularization parameter that determines the amount of error tolerated
+during optimization
+
+Methods:
+
+get_params - uses the Python quadratic programming library CVXOPT to solve the
+support vector machine quadratic programming optimization problem, based on the
+training data and user-defined regularization parameters
+
+train - optimizes the support vector machine's parameters based on training
+dataset and regularization parameters
+
+predict - predicts class values for new instances once support vector machine
+parameters have been optimized
