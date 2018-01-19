@@ -1,0 +1,38 @@
+Algorithm: Kernelized Support Vector Machine Regressor
+
+Computes an optimized best fit line for a linear or non-linear dataset, as well
+as a corresponding set of margins that surround as many training instances as
+possible, based on the regularization parameter C. Supports both hard margin
+and soft margin regression. Supports polynomial regression through use of
+polynomial kernel function.
+
+Parameters:
+
+C - regularization parameter that determines the amount of error tolerated
+during optimization
+
+sigma - regularization parameter that determines how wide the corresponding set
+of margins will be during optimization
+
+kernel - boolean value, determines whether the data being optimized is
+linear or non-linear, and whether to use the linear or polynomial kernel
+function
+
+degree - determines to what degree the polynomial kernel should be calculated
+
+Methods:
+
+linear kernel - computes linear kernel for a linear dataset
+
+polynomial kernel - computes a polynomial kernel to allow algorithm to optimize
+parameters for a non-linear dataset
+
+get_params - uses the Python quadratic programming library CVXOPT to solve the
+support vector machine quadratic programming optimization problem, based on the
+training data and user-defined regularization parameters
+
+train - optimizes the support vector machine's parameters based on training
+dataset and regularization parameters
+
+predict - predicts values for new instances once support vector machine
+parameters have been optimized

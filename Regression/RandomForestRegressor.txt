@@ -1,0 +1,19 @@
+Algorithm: Random Forest Regressor
+
+Uses multiple randomized decision trees to create an ensemble method for
+regression. Uses Python's multiprocessing library to optimize performance time.
+
+Parameters:
+
+decision_trees - the number of decision trees to grow in the forest
+
+max_depth - the maximum amount of levels in the tree that will be built
+
+min_samples_per_leaf - the minimum amount of samples that can be in a leaf
+before it can be split
+
+Methods:
+
+train - optimizes the trees in the random forest
+
+predict - uses the optimized random forest to predict values for new instances

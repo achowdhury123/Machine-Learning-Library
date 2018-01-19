@@ -1,0 +1,27 @@
+Algorithm: Linear Regression
+
+Computes an optimized weighted sum of input features. Supports 2nd degree
+polynomial regression for non-linear datasets.
+
+
+Parameters:
+
+n_features - the number of features in the input set
+
+polynomial - boolean value, determines whether the data being optimized is
+linear or non-linear
+
+degree - the degree to which polynomial features should be added; polyfit
+function currently supports adding 2nd degree polynomial features
+
+
+Methods:
+
+polyfit - adds polynomial features to a dataset
+
+train - optimizes linear regression parameters based on training dataset,
+learning rate, and number of iterations; uses randomized, mini-batch gradient
+descent, where batch_size is the size of each training batch
+
+predict - predicts values for new instances once linear regression parameters
+have been optimized

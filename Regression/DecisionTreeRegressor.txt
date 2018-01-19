@@ -1,0 +1,37 @@
+Algorithm: Decision Tree Regressor
+
+Builds a tree structure consisting of nodes, with each node representing a
+decision boundary learned from the training data. New instances traverse the
+decision boundaries until they arrive at a leaf, at which point their
+corresponding value is computed.
+
+Parameters:
+
+max_depth - the maximum amount of levels in the tree that will be built
+
+min_samples_per_leaf - the minimum amount of samples that can be in a leaf
+before it can be split
+
+random - boolean value, determines whether the tree will be trained on the
+entire dataset if false, or if it will be trained on a random subset of the
+dataset if true
+
+random_features - the size of the random subset chosen from the training
+dataset if random is set to true
+
+Methods:
+
+get_average - computes the average of a training set
+
+MSE - computes the mean squared error of a training set
+
+CARTCost - uses the CARTCost algorithm to recursively calculate the optimized
+decision boundaries for the training dataset and build the tree structure based
+off of the calculated decision boundary values
+
+train - calls the CARTCost algorithm
+
+predict_value - recursively traverses the optimized decision tree to predict
+the value for a single instance
+
+predict - calls predict_value function for multiple instances
