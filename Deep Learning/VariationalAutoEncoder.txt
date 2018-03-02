@@ -1,0 +1,17 @@
+Algorithm: Variational AutoEncoder
+
+Creates a Variational AutoEncoder using a fully connected architecture, implemented in TensorFlow.
+
+Parameters:
+
+hidden_layer_list - list containing the user-defined variational autoencoder architecture, where the first element in the list is the number of nodes in the variational autoencoder's input layer and the last element in the list is the number of nodes in the variational autoencoder's output layer
+
+The following example defines a variational autoencoder containing an input layer, 3 hidden layers, and an output layer:
+
+hidden_layer_list = [100, 50, 25, 50, 100]
+
+Methods:
+
+train - initializes the TensorFlow variables defined by the variational autoencoder's hidden layer list, trains them using the given optimizer, and saves the model
+
+predict - restores the model parameters defined when the train method was called, and uses them to create new instances from input noise

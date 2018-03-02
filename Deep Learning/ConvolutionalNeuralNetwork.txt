@@ -1,0 +1,23 @@
+Algorithm: Convolutional Neural Network
+
+Creates a Convolutional Neural Network using a combination of convolutional layers, pooling layers, and fully connected layers.
+
+Parameters:
+
+hidden_layer_list - list containing the user defined convolutional neural network architecture; each element in the list is a list that contains the type of layer ("conv" for convolutional, "pool" for pooling, or "full" for fully connected) 
+
+If a layer is a convolutional layer, the sublist should contain the number of filters, the filter size, and the horizontal and vertical strides 
+
+If a layer is a pooling layer, the sublist should contain the filter size and the horizontal and vertical strides 
+
+If a layer is a fully connected layer, the sublist should contain the number of neurons in the fully connected layer
+
+The following example defines a convolutional neural network containing one convolutional layer, one pooling layer, and one fully connected layer:
+
+hidden_layer_list = [["conv", 1, [5, 5], [1, 1]], ["pool", [2, 2], [2, 2]], ["full", 10]]
+
+Methods:
+
+train - initializes the TensorFlow variables defined by the convolutional neural network's hidden layer list, trains them using the given optimizer, and saves the model
+
+predict - restores the model parameters defined when the train method was called, and uses them to apply the convolutional neural network to new instances

@@ -1,0 +1,17 @@
+Algorithm: Recurrent Neural Network
+
+Creates a Recurrent Neural Network using a combination of recurrent layers and fully connected layers, which can be used for either sequence to sequence analysis for prediction or sequence to vector analysis for classification. The algorithm's training and prediction structure is set to sequence to vector analysis by default. To use the algorithm for sequence to sequence analysis, the "structure" parameter must be set equal to the string "seq_to_seq" during training.
+
+Parameters:
+
+hidden_layer_list - list containing the user-defined neural network architecture, where each element in the list defines a new recurrent layer with the given number of neurons
+
+The following example defines a recurrent neural network containing 3 recurrent layers:
+
+hidden_layer_list = [10, 20, 10]
+
+Methods:
+
+train - initializes the TensorFlow variables defined by the recurrent neural network's hidden layer list, trains them using the given optimizer, and saves the model
+
+predict - restores the model parameters defined when the train method was called, and uses them to apply the recurrent neural network to new instances

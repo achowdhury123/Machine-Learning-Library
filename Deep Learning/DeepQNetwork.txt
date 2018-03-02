@@ -1,0 +1,24 @@
+Algorithm: Deep Q Network
+
+Creates a Deep Q Network that can be used as part of the agent for a reinforcement learning system. 
+
+Parameters:
+
+hidden_layer_list - list containing the user defined deep q network architecture; each element in the list is a list that contains the type of layer ("conv" for convolutional, "pool" for pooling, or "full" for fully connected) 
+
+If a layer is a convolutional layer, the sublist should contain the number of filters, the filter size, and the horizontal and vertical strides 
+
+If a layer is a pooling layer, the sublist should contain the filter size and the horizontal and vertical strides 
+
+If a layer is a fully connected layer, the sublist should contain the number of neurons in the fully connected layer
+
+The following example defines a deep q network containing one convolutional layer, one pooling layer, and one fully connected layer:
+
+hidden_layer_list = [["conv", 1, [5, 5], [1, 1]], ["pool", [2, 2], [2, 2]], ["full", 10]]
+
+Methods:
+
+calculate_layers - initializes the TensorFlow variables that will make up the deep q network's layers 
+
+exploration_policy - exploration method that help the agent to explore it's environment during training
+

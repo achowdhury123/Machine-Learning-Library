@@ -1,0 +1,17 @@
+Algorithm: Deep Neural Network
+
+Creates a Deep Neural Network using a fully connected architecture, implemented in TensorFlow.
+
+Parameters:
+
+hidden_layer_list - list containing the user-defined neural network architecture, where the first element in the list is the number of nodes in the neural network's input layer and the last element in the list is the number of nodes in the neural network's output layer
+
+The following example defines a deep neural network containing an input layer, 2 hidden layers, and an outputs layer:
+
+hidden_layer_list = [100, 50, 25, 10]
+
+Methods:
+
+train - initializes the TensorFlow variables defined by the neural network's hidden layer list, trains them using the given optimizer, and saves the model
+
+predict - restores the model parameters defined when the train method was called, and uses them to apply the neural network to new instances
